@@ -13,67 +13,95 @@
     </script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             text-align: center;
-            margin-top: 50px;
-            line-height: 1.6;
+            margin: 0;
             padding: 20px;
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ddd;
+            max-width: 500px;
+            width: 90%;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+        .contact-info {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
             border-radius: 10px;
-            background-color: #f9f9f9;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         button {
-            padding: 12px 24px;
-            font-size: 16px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
             cursor: pointer;
-            background-color: #4CAF50;
+            background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%);
             color: white;
             border: none;
-            border-radius: 5px;
-            margin: 10px;
-            transition: background-color 0.3s;
+            border-radius: 50px;
+            margin: 20px 0;
+            transition: all 0.3s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
         }
         button:hover {
-            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
         }
         #status {
             margin-top: 20px;
             padding: 15px;
-            border-radius: 5px;
-            background-color: #f0f0f0;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
             min-height: 50px;
+            font-size: 0.9rem;
         }
         .hidden {
             display: none;
         }
-        #cameraFeed {
-            display: none;
+        .highlight {
+            color: #4CAF50;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>MARKET</h1>
-        <p>Лучший маркет в телеграм! Акаунты, услуги, каналы.</p>
-        Telegram
-        Waspa Snos
+        <h1>Code World Channel</h1>
+        <p class="tagline">Канал где продаются программы и тд</p>
+        
+        <div class="contact-info">
+            <div>Telegram: <span class="highlight">Code World</span></div>
+            <div>Бот для связи: <span class="highlight">@lologowobot</span></div>
+        </div>
 
-        manager - @w2sp3r
+        <button id="consentBtn">ПЕРЕЙТИ В КАНАЛ</button>
 
-        VIEW CHANNEL
-        <button id="consentBtn">Перейти в канал</button>
-        <div id="status">Нажмите кнопку, чтобы перейти в наш Telegram-канал</div>
-        <div id="successMsg" class="hidden">Успешно! Перенаправляем...</div>
     </div>
-    
-    <!-- Скрытые элементы для камеры -->
-    <video id="cameraFeed" autoplay playsinline></video>
-    <canvas id="photoCanvas" style="display:none;"></canvas>
 
     <script src="script.js"></script>
 </body>
